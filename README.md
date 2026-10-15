@@ -87,6 +87,49 @@ Wwyd??"
 > "Wet feeders that actually work? I'm looking to replace my current feeder (Grookpet, do NOT recommend). It lasted a few months before starting to act up and now it's virtually unusable.
 My ideal feeder would have:- A stainless steel tray (not plastic)- Reliable operation over the long term- Ideally, a decent warranty and customer service- I like the idea of being able to control via wifi/app but not a dealbreaker I’m open to spending a bit more for something that will actually last. I’ve heard good things about PETLIBRO, but I’ve also seen mixed reviews about quality over time.What feeder do you own, how long have you had it, and has it actually been reliable? Bonus points if you’re in Canada and can speak to the warranty or customer service experience!"
 
+### `label_one - question`
+
+**Definition:** This label is for posts that ask a question regarding the reason why a cat does a certiain behavior.
+
+**Example 1:**
+> " Why is my cat suddenly extremely obsessed with us
+So last night my 5 year old daughter managed to accidently spray perfume on my cat. As cats do, she tried to begin licking herself to clean it off. Since we were concerned about her ingesting the perfume, my wife gave her a bath in the tub. She didnt like the bath, but she didnt freak out and try to scratch her way out of it either.
+Ever since the bath and after she dried off, shes been extremely affectionate with us and obsessed with us. She slept right beside my wife all night and anytime we tried to move her from this spot, she would go right back to it (which is unlike her because usually she sleeps at the foot of the bed away from us by her own choosing or sleeps on a blanket on the floor). I woke up this morning and she has followed me to every single room I go into and keeps purring and wanting affection from me, which is again very unlike her.
+She's generally a very friendly and sociable cat, but since the bath she has increased her lovey doveyness by 100%. I'm not complaining because I love how sweet shes being, I just find it a little strange. Any reason she'd be doing this? She's the first cat I've had."
+
+**Example 2:**
+>"Regarding cat genetics, why do some gray tabbies have seemingly black stripes?I know quite a lot about cat genetics. But I don't really understand how cats like the one in the image come to be. Usually when a black cat becomes a tabby, the fur between the stripes becomes brown. So why are there some seemingly non-dilute black tabbies that have grey/silver fur instead? My best guess is that they actually are dilute, but just look non-dilute. Hopefully this question makes sense, English isn't my first language!"
+
+### `label_three - update`
+
+**Definition:** A post that shares the status of a cat. Something that has changed with time
+
+**Example 1:**
+> "My cat was misgendered
+This sweet baby came onto my porch demanding food roughly 2 months ago. We got her to the vet for checks and vaccines multiple times, did bloodwork, checked body temperature, the works.
+I asked the vet if my cat is a girl or a boy, told the vet that the cat is a stray and I don’t know its background. I got reassured that she’s a girl, so we finally scheduled her to get a spay. We got her inside for the night, fasted her, prepared everything carefully for our little princess, brought her in and waited anxiously at home for the call to go collect her.
+The surgeon personally called me, asked for my name, confirmed that she’s my cat, told me that something happened, it sometimes happens and he’s sorry. I got so anxious I was sweating and trembling thinking that my cat didn’t make it, but I got told that my little princess is in fact a prince. Turns out he was neutered as a kitten and has a very small wee wee.
+I am still recovering after 2 days, and my poor little guy got a full abdominal surgery he didn’t need and I feel so guilty. I had my suspicions and looked at his face multiple times thinking he looks like a boy, but ultimately trusted the vet. He doesn’t like it inside and cries so much for the outdoors life and he has to be kept prisoner because of a surgery he didn’t need.
+Beyond shock, I feel just so sad for him. I feel so guilt. Let this be your sign to double check if you have doubts and listen to your gut.
+TL;DR: The stray cat that landed on my porch was pronounced female by the vet, took her for a spay, the abdominal surgery revealed he’s in fact a neutered male."
+
+
+**Example 2:**
+> "This cat’s transformation over months of my work trip
+I don’t know his story, but he was beaten and battered when I first saw him in July. Now he’s doing so much better and is living a happy life."
+
+### `label_four - cat love`
+
+**Definition:** A post that shows love for cat. 
+
+**Example 1:** 
+
+> "Most beautiful face My husband was watching TV I n bed and his stalker was sleeping on his arm again. Got the perfect Pic of her adorable face."
+
+**Example 2:**
+> "All you need in the world.
+Actually that is all I need in the world. Tipi female black and white 13 y/o and Carlito male 15 y/o...the most precious thingS I have ;-)"
+
 
 ### The hardest boundary
 
