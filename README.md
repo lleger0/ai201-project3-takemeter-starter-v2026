@@ -87,18 +87,6 @@ Wwyd??"
 > "Wet feeders that actually work? I'm looking to replace my current feeder (Grookpet, do NOT recommend). It lasted a few months before starting to act up and now it's virtually unusable.
 My ideal feeder would have:- A stainless steel tray (not plastic)- Reliable operation over the long term- Ideally, a decent warranty and customer service- I like the idea of being able to control via wifi/app but not a dealbreaker I’m open to spending a bit more for something that will actually last. I’ve heard good things about PETLIBRO, but I’ve also seen mixed reviews about quality over time.What feeder do you own, how long have you had it, and has it actually been reliable? Bonus points if you’re in Canada and can speak to the warranty or customer service experience!"
 
-### `label_one - question`
-
-**Definition:** This label is for posts that ask a question regarding the reason why a cat does a certiain behavior.
-
-**Example 1:**
-> " Why is my cat suddenly extremely obsessed with us
-So last night my 5 year old daughter managed to accidently spray perfume on my cat. As cats do, she tried to begin licking herself to clean it off. Since we were concerned about her ingesting the perfume, my wife gave her a bath in the tub. She didnt like the bath, but she didnt freak out and try to scratch her way out of it either.
-Ever since the bath and after she dried off, shes been extremely affectionate with us and obsessed with us. She slept right beside my wife all night and anytime we tried to move her from this spot, she would go right back to it (which is unlike her because usually she sleeps at the foot of the bed away from us by her own choosing or sleeps on a blanket on the floor). I woke up this morning and she has followed me to every single room I go into and keeps purring and wanting affection from me, which is again very unlike her.
-She's generally a very friendly and sociable cat, but since the bath she has increased her lovey doveyness by 100%. I'm not complaining because I love how sweet shes being, I just find it a little strange. Any reason she'd be doing this? She's the first cat I've had."
-
-**Example 2:**
->"Regarding cat genetics, why do some gray tabbies have seemingly black stripes?I know quite a lot about cat genetics. But I don't really understand how cats like the one in the image come to be. Usually when a black cat becomes a tabby, the fur between the stripes becomes brown. So why are there some seemingly non-dilute black tabbies that have grey/silver fur instead? My best guess is that they actually are dilute, but just look non-dilute. Hopefully this question makes sense, English isn't my first language!"
 
 ### `label_three - update`
 
