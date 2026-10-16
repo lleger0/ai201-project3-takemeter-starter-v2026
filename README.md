@@ -90,7 +90,7 @@ My ideal feeder would have:- A stainless steel tray (not plastic)- Reliable oper
 
 ### `label_three - update`
 
-**Definition:** A post that shares the status of a cat. Something that has changed with time
+**Definition:** A post that shares the status of a cat. Something that has changed with time. Should show a change in state, not just a mention of time.
 
 **Example 1:**
 > "My cat was misgendered
@@ -108,7 +108,7 @@ I don’t know his story, but he was beaten and battered when I first saw him in
 
 ### `label_four - cat love`
 
-**Definition:** A post that shows love for cat. 
+**Definition:** A post that shows love for cat. Also includes humor. Includes saying that the cat is cute or happy. Could also involve a joke that is satire.
 
 **Example 1:** 
 
@@ -136,7 +136,7 @@ If the post does not ask how to deal with a situation, then it is a question. If
 <!-- Where you collected from, how you labelled, your counts, and three hard
      cases. -->
 
-**Where the posts came from:**
+**Where the posts came from:**  The posts came from the subreddit forum r/cats. I wasn't able to get 200 posts because I ran out of time. 81% of the posts are labeled.  I have 82 lines and 67 labelled posts.
 
 **How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
 Say so plainly — the disclosure is required, not penalised. -->
