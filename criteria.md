@@ -51,61 +51,61 @@ whether you hit them:
 
 ---
 
-## 1.
+## 1. Overall accuracy is over 60%
 
 <!-- Your criterion. It must name a number. -->
 
 
 
-**Why this target:**
+**Why this target:** 60% means that the AI is correct most of the time. However it is still a low number. I'm keeping in mind that the AI could get confused between the borderline options.
 
 
 
 ---
 
-## 2.
+## 2. The cat love label has an F1 of 0.8
 
 <!-- Your criterion. -->
 
 
+**Why this target:** The cat love label should be the easiest to identify out of the other labels. Because of this, I am expecting a high F1.
 
-**Why this target:**
 
 
 
 ---
 
-## 3.
+## 3. One label shouldn't have a count over 150 out of 200. If it does then the model should stop.
 
 <!-- Your criterion. -->
 
 
 
-**Why this target:**
+**Why this target:** This is to deal with lopsided labelling. Stopping the model before it gets to 150 should help when it comes to debugging.
 
 
 
 ---
 
-## 4.
+## 4. The model should be able to consistently label a post the same thing in 2/3 tries.
 
 <!-- Your criterion. -->
 
 
 
-**Why this target:**
+**Why this target:** This helps to show that the model is consistent and understands why a post has a certain label. If the model 
 
 
 
 ---
 
-## 5.
+## 5. If the AI model has a confidence score of over 90% then the answer should be correct.
 
 <!-- Your criterion. -->
 
 
 
-**Why this target:**
+**Why this target:** If the AI has a high confidence score but labels the post incorrectly, that means it does not understand the meaning of the label. If the AI is confident then it should label the post correctly.
 
 
 
