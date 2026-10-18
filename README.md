@@ -42,6 +42,7 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
+This is a classifier that classifies posts from the r/cats forum on reddit. The classifier sorts the posts into 4 labels: update, question, advice, and catlove. The classifier will train on labelled posts given in labels.csv. I wasn't able to put 200 posts in labels.csv due to the time constraint however, I made sure that labels.csv had at least 150 posts. The labels are defined below.
 
 
 ---
@@ -136,19 +137,28 @@ If the post does not ask how to deal with a situation, then it is a question. If
 <!-- Where you collected from, how you labelled, your counts, and three hard
      cases. -->
 
-**Where the posts came from:**  The posts came from the subreddit forum r/cats. I wasn't able to get 200 posts because I ran out of time. 81% of the posts are labeled.  I have 82 lines and 67 labelled posts.
+**Where the posts came from:**  The posts came from the subreddit forum r/cats. I wasn't able to get 200 posts because I ran out of time. 
 
 **How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
 Say so plainly — the disclosure is required, not penalised. -->
+I cold labelled most of the posts. Some of the posts I was able to label while copying and pasting them into labels.csv. There were some posts that were too long or interrupted my flow with copy and pasting. I labled most of the posts and around 58 posts were prelabelled by AI.
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+|catlove | 49  | 31.9% |
+| advice | 41 | 26.7% |
+| update  | 35 | 22.7% |
+| question | 29 | 18.9% |
+
+| **Total** | 154 | 100% |
+
+label
+catlove     49
+advice      41
+update      35
+question    25
 
 **Three hard cases**
 
@@ -156,25 +166,25 @@ Say so plainly — the disclosure is required, not penalised. -->
      been, and what you chose. These are worth more than the easy 190. -->
 
 **1.**
-> *The post:*
+> *The post:* Are the whiskers too short? I just got this little goober, I’ve had a baby cat before but I don’t remember the whiskers looking so small, oh also bonus could yall help me with a name? I think it’s a boy
 >
-> *Could have been:*
+> *Could have been:* Advice since it asks for suggestions regarding a cat name. 
 >
-> *I chose, because:*
+> *I chose, because:* I chose question because the main purpose of the post is to ask why the cat has short whiskers. The poster wants to understand a cat occurance.
 
-**2.**
-> *The post:*
+**2.** 
+> *The post:* My 3 month old bestie is happy and content Hello all, meet my one and only Speedy Gonzales!
 >
-> *Could have been:*
+> *Could have been:* Update. This post mention "3 month old" which suggests a passage of time.
 >
-> *I chose, because:*
+> *I chose, because:* I chose catlove because even though the post mentions the phrase "3 month" this is only used to describe the age of the cat. This post has no clear before and after. It's overall theme is cat appreciaton. 
 
 **3.**
-> *The post:*
+> *The post:* My cat couldn't keep food down for 24 hours so I spiraled. The vet's face said everything. Giving a fish-addicted Charlie a single piece of chicken (I gave her canned cat food chicken) apparently warrants an international crisis. She couldn't keep food down for 24hrs after her gourmet betrayal, so naturally, I didn't just worry... I was sitting in the dark at 3am wondering how the hell I was going to survive the heartbreak, how was I going to keep her sister from grieving and how I was ever supposed to move on??? I walked into the vet clinic the next morning looking like a zombie, practically in tears explaining her “tragic decline”. The staff was super kind, but the vet took one look at her, then looked at me with pure concern for my mental stability. Turns out it was just a minor stomach upset from the rogue chicken. Lol Please tell me I'm not the only idiot who has dragged their cat to the vet because they spiraled hard. What is your most embarrassing vet visit?
 >
-> *Could have been:*
+> *Could have been:* question. Question can be used for any post that espresses curiosity without the intent to gain advice or fix a problem
 >
-> *I chose, because:*
+> *I chose, because:* I chose update because while the post does ask a curious question towards the end, most of the post is a story that offers a before and after going from begginning to end. Because of that, update is a more fitting label.
 
 ---
 
@@ -182,15 +192,30 @@ Say so plainly — the disclosure is required, not penalised. -->
 
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
-**Base model:**
+**Base model:** distilbert-base-uncase
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Settings:** <!-- epochs, learning rate, batch size, seed --> seed 42, 3 epochs, lr 2e-05, batch 16
 
-**Anything I changed from the defaults, and why:**
+**Anything I changed from the defaults, and why:** I did not change any defaults.
 
-**Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
+**Split sizes:** <!-- train / val / test, and per-label counts in the test split. If a label had fewer than about 8 in test, say so — it explains a lot of next unit's variance. --> 
+
+train 104  ·  val 23  ·  test 23
+
+
+
+| label  | train | val | test|
+|---|---|---|---|            
+catlove   |   34  |  7  |   8
+update   |    24  |  6  |   5
+advice   |    29 |   6   |  6
+question |    17  |  4   |  4
+
+[note] 'update' has only 5 examples in the test split.
+
+[note] 'advice' has only 6 examples in the test split.
+
+[note] 'question' has only 4 examples in the test split.
 
 
 
@@ -205,19 +230,37 @@ of next unit's variance. -->
      workflow and disclosing it costs you nothing. Not disclosing it is the
      problem. -->
 
-**Moment 1**
+**Moment 1** 
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* While the AI was labelling the posts in my CSV files I asked it to tell me about which labels it was unsure about.
+- *What came back:* 
+
+     The definitions are unclear in a few places:
+
+     1. Question is narrower than the posts that use it. It’s defined as “why a cat does a behavior,” but your labeled rows also use it for non-“why” questions, like identifying a color pattern or asking “what does this body language mean.” I followed your labeled rows and used question for factual or interpretive questions. Should that be the rule?
+     2. Question and advice overlap. Many posts ask “is this normal?” or “is she okay?” and also want to know what to do. I used question when the main ask is understanding something and advice when the main ask is an action or recommendation. Product recs, name suggestions and “how do I stop X” all went to advice, matching your labeled examples.
+     3. Update versus catlove for rescue, adoption and memorial posts. Your labeled rows treat adoption anniversaries and goodbyes as update, but sweet “look what I found” posts as catlove. I used update when the post narrates a clear before and after, and catlove when it mainly celebrates the cat.
+     4. Mixed posts. Some posts contain an edit or UPDATE section but are mainly a request for help (the Cerenia post, the whisker post). I labeled by the post’s main purpose. Should an edit change that?
+     5. Posts with no clear label. The declawing post and the “monster who put babies in a bag” post are mostly venting or outrage. Is there a fifth category, or should they go in one of the four?"
+- *What I changed:* This helped me be more specific about my label definitions in README.md.
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* While I was editing the "Three hard cases" section from README.md, I came accross a post that I was unsure if I had labelled it correctly. I asked the AI if it thought that I labelled it correctly and if so/not say why.
+- *What came back:* 
+     "I don’t think question is the right label for this post. Line 9 (in the CSV, counting the header as line 1) has the existing note “this could be question or update,” which fits how I read it. I’d pick update, with catlove as the runner-up.
 
-**Pre-labelling disclosure:**
+     Why question doesn’t fit: label_one - question is defined as asking why a cat does a certain behavior. The only question in this post is “What is your most embarrassing vet visit?” That is a prompt for other people to share stories, not a request to explain anything about the cat. The “why” is already answered inside the post (it was a minor stomach upset from the chicken).
+
+     Why update fits best: the post narrates a clear change in the cat’s state. She couldn’t keep food down for 24 hours, the owner took her to the vet, and it turned out to be a minor stomach upset. That is a before-and-after, which is what your update definition asks for (“a change in state, not just a mention of time”).
+
+     Why catlove is a close second: the tone is humor (“gourmet betrayal,” “international crisis,” “tragic decline”), and your catlove definition includes humor. But the joke is mostly about the owner overreacting, not about the cat, and the post spends most of its length on the sick-then-fine sequence. So I’d rank it below update.
+
+     This row was already labeled, so I haven’t changed it. This post is also a good example of definition issue 1 from my earlier list: your labeled rows seem to use question for any post that ends in a question, not only “why behavior” ones. If that’s your intent, the label is defensible, but then label_one needs a broader definition. The other posts that end in a community prompt (“What’s your cat’s name…”, “What’s the weirdest food…”) I labeled catlove, so I’d want your call on which way to go for consistency."
+
+- *What I changed:* It helped me reinforce my decision to change the label from question to update in line 9 labels.csv. It highlighted the "change in the cat's state".
+
+**Pre-labelling disclosure:** I used AI to prelabel 58 posts. I gave the AI my label definitions as well as over 20 examples of how I labelled different posts.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
