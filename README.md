@@ -56,7 +56,7 @@
 
 ### `label_one - question`
 
-**Definition:** This label is for posts that ask a question regarding the reason why a cat does a certiain behavior.
+**Definition:** This label is for posts that ask a question regarding the reason why a cat does a certiain behavior. This can also be used for why or interpretive or factual questions. It could be used for questions asking to identify a color pattern or identify body language.
 
 **Example 1:**
 > " Why is my cat suddenly extremely obsessed with us
@@ -90,7 +90,7 @@ My ideal feeder would have:- A stainless steel tray (not plastic)- Reliable oper
 
 ### `label_three - update`
 
-**Definition:** A post that shares the status of a cat. Something that has changed with time. Should show a change in state, not just a mention of time.
+**Definition:** A post that shares the status of a cat. Something that has changed with time. Should show a change in state, not just a mention of time. Should have a clear before and after.
 
 **Example 1:**
 > "My cat was misgendered
@@ -106,9 +106,9 @@ TL;DR: The stray cat that landed on my porch was pronounced female by the vet, t
 > "This cat’s transformation over months of my work trip
 I don’t know his story, but he was beaten and battered when I first saw him in July. Now he’s doing so much better and is living a happy life."
 
-### `label_four - cat love`
+### `label_four - catlove`
 
-**Definition:** A post that shows love for cat. Also includes humor. Includes saying that the cat is cute or happy. Could also involve a joke that is satire.
+**Definition:** A post that shows love for cat. Also includes humor. Includes saying that the cat is cute or happy. Could also involve a joke that is satire. Celebrates the cat.
 
 **Example 1:** 
 
@@ -126,7 +126,7 @@ Actually that is all I need in the world. Tipi female black and white 13 y/o and
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
-If the post does not ask how to deal with a situation, then it is a question. If it does, then it is advice.
+If the post does not ask how to deal with a situation, then it is a question. If it does, then it is advice. Question should be used when the post is asking to understand something. Advice should be used when the post is asking for a recommendation or action. 
 
 
 ---
