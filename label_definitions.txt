@@ -5,6 +5,7 @@
 #
 # Delete the examples below and put yours in.
 
-analysis: makes an argument backed by a specific, checkable fact
-hot_take: a confident claim with no support offered
-reaction: an immediate response to something that just happened
+update:  A post that shares the status of a cat. Something that has changed with time. Should show a change in state, not just a mention of time. Should have a clear before and after.
+advice:  what do i do about this behavior/ situation. This label is for posts that ask for advice regarding a problem.
+catlove: A post that shows love for cat. Also includes humor. Includes saying that the cat is cute or happy. Could also involve a joke that is satire. Celebrates the cat.
+question: This label is for posts that ask a question regarding the reason why a cat does a certiain behavior. This can also be used for why or interpretive or factual questions. It could be used for questions asking to identify a color pattern or identify body language.
