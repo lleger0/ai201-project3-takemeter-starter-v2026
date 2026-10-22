@@ -274,20 +274,27 @@ question |    17  |  4   |  4
 <!-- Both models on the same posts. `python baseline.py --trained results.json`
      prints this table for you. -->
 
+
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Overall accuracy | 0.217 | 0.478 | +0.261 |
+| Macro F1 | 0.135 | 0.303 | +0.169 |
+| F1 — `advice` | 0.316 | 0.545 | +0.230 |
+| F1 — `catlove` | 0.222 | 0.667 | +0.444 |
+| F1 — `question` | 0.000 | 0.000 | +0.000 |
+| F1 — `update` | 0.000 | 0.000 | +0.000 |
 
 **What I predicted before I looked:**
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
      prediction made afterwards isn't one. -->
 
+I think my trained model will do much better than the untrained one. For 2 labels the untrained model got an F1 score of 0. I predict the overall acurracy of the trained model will be over 0.5
+
 **What the gap actually means:**
 <!-- If the baseline matched your trained model, your fine-tuning added
      nothing — and that is a real finding, not a failure. Say it plainly. -->
+
+I was close in saying that overall accuracy would be over 0.5 as I got an accuracy of 0.478 which rounded up is 0.5. I am shocked to see that 2 labels got F1 scores of 0. The reason of the low F1 score could be because I don't have as much training data for those categories.
 
 
 
