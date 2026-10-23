@@ -411,7 +411,34 @@ Accidentally wrote this table a bit earlier, so I'm not deleting it yet.
      data/staff_taxonomy.md, not your own — so every argument below is made
      from those definitions and those decision rules. -->
 
-**Agreement rate:** ___ / 30 = ___%
+     
+<!-- Compared 30 posts.
+
+  agreed      28
+  disagreed   2
+  agreement   93%
+
+Here they are. Your README has a block to fill in for each one —
+the post, both labels, your call and why, and which pile it goes in.
+
+| Post | Staff said | I said | My call, and why |
+|---|---|---|---|
+| The club championship scoring changed in 2019 from top-6 to top-10. S… | `analysis` | `hot_take` | The reason why I said hot take was because I felt like the last sentence was a hot take. However I do think what the staff wroteis correct because the sentence starts with a statistic. |
+| Carbon plates aren't the whole story. My times dropped 2% in the shoe… | `analysis` | `reaction` | The writer is rreacting to something that happened to them, the fact that they think that their shoes decreased their time. I think that I am correct this time. |
+
+"Staff is right" every time is not adjudication. Some of these posts
+were picked because they are genuinely ambiguous.
+
+Wrote agreement_results.json. Commit it.
+
+Then sort each disagreement into one of three piles:
+  (a) the rule covered it and you applied it loosely — a consistency problem
+  (b) the rule genuinely doesn't say — a gap in the definitions
+  (c) the rule is ambiguous here and your reading is defensible — argue it
+
+(b) and (c) are the interesting ones, and (c) is a legitimate win. -->
+
+**Agreement rate:** 28 / 30 = 93%
 
 <!-- Nobody grades this number. A 60% who argues every disagreement from the
      stated rules beats a 95% who wrote "staff was right" nine times. Several
@@ -434,25 +461,25 @@ Accidentally wrote this table a bit earlier, so I'm not deleting it yet.
      what you did across your own 200. -->
 
 **1.**
-> *The post:*
+> *The post:* The club championship scoring changed in 2019 from top-6 to top-10. Since then our B team has finished above the A team twice. That's not depth improving, it's the scoring rewarding turnout.
 >
-> *Staff said / I said:*
+> *Staff said / I said:* `analysis` | `hot_take`
 >
-> *My call, and why:*
+> *My call, and why:* The reason why I said hot take was because I felt like the last sentence was a hot take. However I do think what the staff wroteis correct because the sentence starts with a statistic.
 >
-> *Which pile:*
+> *Which pile:* (a) the rule covered it and I applied it loosely — a consistency problem
 
 **2.**
-> *The post:*
+> *The post:* Carbon plates aren't the whole story. My times dropped 2% in the shoes and another 2% the following year in the same pair, when the only thing that changed was going from 35 to 50 miles a week.
 >
-> *Staff said / I said:*
+> *Staff said / I said:* `analysis` | `reaction`
 >
-> *My call, and why:*
+> *My call, and why:* The writer is reacting to something that happened to them; the fact that they think that their shoes decreased their time. I think that I am correct this time. The first sentence does not show a statistic. This post could even be argued to be a hot take but I think its closer to reaction.
 >
-> *Which pile:*
+> *Which pile:* (c) the rule is ambiguous here and my reading is defensible
 
 **What the pattern in my disagreements tells me:**
-
+I can sometimes be inconsistent in labelling. Mislabelling one post out of 30 could lead to mislabeling many posts out of 150. Also having ambiguous rules can also be an issue in labelling. If my rules weren't fully clear then some of my posts might not have a clear label and it might be unclear to the model as well.
 
 
 ---
