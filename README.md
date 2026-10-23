@@ -305,30 +305,49 @@ I was close in saying that overall accuracy would be over 0.5 as I got an accura
 <!-- Five criteria across three seeds. The notebook's section 6 prints the
      spread table; the Target and Verdict columns are yours. -->
 
-| Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
-|---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
 
+| Measure/ Criterion |Target | Seed 42 | Seed 7 | Seed 2024 | Spread | Verdict|
+|---|---|---|---|---|---| ---|
+| Overall accuracy |>0.60| 0.522 | 0.304 | 0.261 | 0.261 |MISSED|
+| Macro F1| >0.50 | 0.334 | 0.170 | 0.103 | 0.231 |MISSED|
+| F1 — `catlove` |>0.8| 0.706 | 0.250 | 0.000 | 0.706 |MISSED|
+| F1 — `update` |>0.5| 0.000 | 0.000 | 0.000 | 0.000 |MISSED|
+| F1 — `advice` |>0.5| 0.632 | 0.429 | 0.414 | 0.218 | MISSED |
+| F1 — `question` |>0.5| 0.000 | 0.000 | 0.000 | 0.000 |MISSED|
+
+Accuracy moved 0.261 across seeds — more than 10 points. The dataset is too small or too lopsided for a stable measure. 
+ 
 ### Confusion matrix
 
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
      An image of a matrix earns nothing. -->
 
-| true \ predicted |  |  |  |
+<!-- | true \ predicted |  |  |  |
 |---|---|---|---|
 | **** |  |  |  |
 | **** |  |  |  |
-| **** |  |  |  |
+| **** |  |  |  | -->
+
+| true \ predicted | catlove | update | advice | question |
+|---|---|---|---|---|
+| **catlove** | 6 | 0 | 1 | 0 | 
+| **update** | 2 | 0 | 4 | 0 |
+| **advice** | 0 | 0 | 6 | 0 |
+| **question** | 2 | 0 | 2 | 0 |
+
+Biggest confusion: 4 real `update` posts called `advice`.
+The other direction: 0 real `advice` posts called `update`.
+
+That's lopsided — the model leans toward `advice` on this pair.
+A direction like that usually points at your labelling rather than the
+model. Your agreement report is the thing that can tell you which.
 
 **My biggest off-diagonal number, and what it means:**
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
      direction. "7 real analysis posts were called hot_take and only 3 went the
      other way" is a direction, not just an error rate. -->
 
+All of the advice posts were labelled correctly. However there were other posts in other categories that were also labelled as advice. Especially update seems to get confused as advice.
 
 
 ---
@@ -345,6 +364,29 @@ I was close in saying that overall accuracy would be over 0.5 as I got an accura
 | 3 |  |  |  |  |
 | 4 |  |  |  |  |
 | 5 |  |  |  |  |
+
+**label percentages for criteria 3 based on confusion matrix**
+
+catlove - 0.43
+advice 0.56
+
+**From section 5 results run:**
+
+confidence   most-sure third 0.429   ·   least-sure third 0.429
+
+
+<!--
+
+Accidentally wrote this table a bit earlier, so I'm not deleting it yet.
+
+| Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
+|---|---|---|---|---|---|
+| 1. Overall Accuracy | >0.60 | 0.522 | 0.304 | 0.261 |
+| 2. The cat love label has an F1 of 0.8  | >0.8 | 0.706 | 0.250 | 0.000 |
+| 3. One label shouldn't have a count over 70% of the test data.  |  |  |  |  | MET | 
+| 4.  |  |  |  |  |  |
+| 5. If the AI model has a confidence score of over 90% then the answer should be correct. |  |  |  |  | MET |-->
+
 
 **Diagnoses**
 
