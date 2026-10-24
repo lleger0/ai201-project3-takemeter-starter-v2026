@@ -83,6 +83,9 @@ whether you hit them:
 
 **Why this target:** This is to deal with lopsided labelling. Stopping the model before it gets to 150 should help when it comes to debugging.
 
+> **Revised in Unit 6:** One label shouldn't have a count over 70% of the test data.
+
+> **Why revised:** The test split can depend on a variety of factors. This makes it so this criteria can always be tested even if the split isn't 200.
 
 
 ---
@@ -91,11 +94,15 @@ whether you hit them:
 
 <!-- Your criterion. -->
 
-
-
 **Why this target:** This helps to show that the model is consistent and understands why a post has a certain label. If the model 
 
+**Revised in Unit 6, split into two**
 
+**4a.** The model should be able to consistently have the same overall accuracy, or be in a 10 point range in 2/3 tries. This means running the project 3 times and seeing what the results yield. 
+
+**4b.** There should be no more than 10 points between each seed. If the model is consistent then each seed should yield similar results.
+
+**Why Revised:**  Both of these criteria show consistency and they are testable and easier to understand.
 
 ---
 

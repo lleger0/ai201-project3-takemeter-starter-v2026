@@ -359,33 +359,14 @@ All of the advice posts were labelled correctly. However there were other posts 
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
-
-**label percentages for criteria 3 based on confusion matrix**
-
-catlove - 0.43
-advice 0.56
-
-**From section 5 results run:**
-
-confidence   most-sure third 0.429   ·   least-sure third 0.429
+| 1 |  Overall Accuracy | >0.60 | MISSED | Accuracy of all 3 seeds were less than 0.60 |
+| 2 |  The cat love label has an F1 of 0.8  | >0.8  | MISSED | cat love f1 label was under 0.8 for all 3 seeds |
+| 3 | One label shouldn't have a count over 70% of the test data. | <0.7 | MET | label percentages are based on the confusion matrix: catlove - 0.43 advice 0.56  |
+| 4a | The model should be able to consistently have the same overall accuracy, or be in a 10 point range in 2/3 tries. | .10 | MET | I ran the project 3 times to find that the numbers stayed the same each time it ran. |
+| 4b | There should be no more than 10 points between each seed. If the model is consistent then each seed should yield similar results. | .10 | MISSED | The spread in accuracy accross the 3 seeds was 0.208 |
+| 5 | If the AI model has a confidence score of over 90% then the answer should be correct. | >0.90  | MET | From section 5 results run: confidence   most-sure third 0.429   ·   least-sure third 0.429 |
 
 
-<!--
-
-Accidentally wrote this table a bit earlier, so I'm not deleting it yet.
-
-| Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
-|---|---|---|---|---|---|
-| 1. Overall Accuracy | >0.60 | 0.522 | 0.304 | 0.261 |
-| 2. The cat love label has an F1 of 0.8  | >0.8 | 0.706 | 0.250 | 0.000 |
-| 3. One label shouldn't have a count over 70% of the test data.  |  |  |  |  | MET | 
-| 4.  |  |  |  |  |  |
-| 5. If the AI model has a confidence score of over 90% then the answer should be correct. |  |  |  |  | MET |-->
 
 
 **Diagnoses**
@@ -398,6 +379,13 @@ Accidentally wrote this table a bit earlier, so I'm not deleting it yet.
      ⚠️ Use your agreement report as evidence. It is the only instrument you
      have that can tell a LABELLING problem from a MODEL problem, and this
      section is graded on whether you used it that way. -->
+
+     Criteria 1 miss: The lack of accuracy was definitely caused by the fact that 2 out of 4 labels had an F1 score of 0. The 2 labels with the lowest F1 scores are the labels with the least amount of data.
+
+     
+     Criteria 2 miss: For one of the seeds, the cat love label had an F1 score of 0.708. I think its possible for the label to reach an F1 score of 0.8 after improving it in other areas.
+
+     Criteria 4b: This issue is definitely caused by a lack of training data. The 2 labels with the lowest F1 scores are the labels with the least amount of data. Unclear rules could also be an issue. After the agreement report, I found that unclear rules can cause 2 people to label the same post 2 different things. Unclear labeling in the training data and unclear rules could have also caused a decrease in accuracy. 
 
 
 
