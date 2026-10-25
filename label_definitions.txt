@@ -5,7 +5,7 @@
 #
 # Delete the examples below and put yours in.
 
-update: A post that shares the status of a cat. Something that has changed with time. Should show a change in state, not just a mention of time. Should have a clear before and after.
-advice: A post that asks what to do about a behavior or situation. This label is for posts that ask for advice regarding a problem.
-catlove: A post that shows love for cat. Also includes humor. Includes saying that the cat is cute or happy. Could also involve a joke that is satire. Celebrates the cat.
-question: This label is for posts that ask a question regarding the reason why a cat does a certiain behavior. This can also be used for why or interpretive or factual questions. It could be used for questions asking to identify a color pattern or identify body language.
+update: A post that shares the status of a cat. Something that has changed with time. Should show a change in state, not just a mention of time. Should have a clear before and after. This could also involve explaining a situation. For posts that are borderline, look at what the main purpose of the post is to help making the decision.
+advice: A post that asks what to do about a behavior or situation. This label is for posts that ask for advice regarding a problem. For posts that are borderline, look at what the main purpose of the post is to help making the decision.
+catlove: A post that shows love for cat. Also includes humor. Includes saying that the cat is cute or happy. Could also involve a joke that is satire. Celebrates the cat. For posts that are borderline, look at what the main purpose of the post is to help making the decision.
+question: This label is for posts that ask a question regarding the reason why a cat does a certiain behavior. This can also be used for why or interpretive or factual questions. It could be used for questions asking to identify a color pattern or identify body language. If the post is asking a question but not seeking advice then it is a question. For posts that are borderline, look at what the main purpose of the post is to help making the decision

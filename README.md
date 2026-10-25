@@ -475,24 +475,53 @@ I can sometimes be inconsistent in labelling. Mislabelling one post out of 30 co
 ## The Improvement
 
 **What I changed:**
+I added more label examples to especially question and update. I added no label examples to catlove since it had already started in excess.
+I also added more detailed rules to label_definitions while I was adding more labels to labels.csv to clear up some borderline posts.
 
-**Which diagnosis pointed at it:**
+Labels Before:
+Highest : Catlove - 49
+Update - 36 - gather 13 - F1 score 0
+Question - 24 - gather 25 - F1 score 0
+
+Labels After:
+update      54
+question    52
+catlove     50
+advice      44
+
+
+**Which diagnosis pointed at it:** The low F1 scores.
 
 ### Run Log — After
 
-| Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
+<!-- | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
 | 1.  |  |  |  |  |  |
 | 2.  |  |  |  |  |  |
 | 3.  |  |  |  |  |  |
 | 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 5.  |  |  |  |  |  | -->
+
+| Measure/Criterion |Target| Seed 42 | Seed 7 | Seed 2024 | Spread | Verdict
+|---|---|---|---|---|---|---|
+| Overall accuracy |>0.8| 0.300 | 0.500 | 0.467 | 0.200 |MISSED
+| Macro F1|>0.50 | 0.235  |0.337 | 0.329 | 0.102 |MISSED
+| F1 — `catlove` |>0.8| 0.000 | 0.000 | 0.000 | 0.000 | MISSED
+| F1 — `update` |>0.5 |0.375 | 0.571 | 0.516 | 0.196 | MISSED
+| F1 — `advice` |>0.5 |0.182 | 0.000 | 0.000 | 0.182 | MISSED
+| F1 — `question` |>0.5| 0.385 | 0.778 | 0.800 | 0.415 | MISSED
+
+Accuracy moved 0.200 across seeds — more than 10 points. Your dataset is too small or too lopsided for a stable measure. That IS a diagnosis. Write it down.
 
 **Did it help, and how do I know:**
 
 <!-- If it didn't, say so. Relabelling that didn't help is a genuinely
      interesting result and earns full credit. -->
 
+I think that the changes could have had the potential to work if Seed 42 was a different seed. Out of all the seeds, Seed 42 performed the worst and prevented the criteria from being met.
+The other issue is that catlove, which previously was the best performing category, is now the worse performing category.
+
+I would say that labelling and adding to the definitions helped because it improved the spread of the labels.
 
 
 ---
@@ -501,11 +530,26 @@ I can sometimes be inconsistent in labelling. Mislabelling one post out of 30 co
 
 <!-- For each criterion still missed: what you'd do, and why you stopped. -->
 
+In trying to fix the F1 score of the update and question labels, the F1 score of the catlove label got demoted to 0.
+
 
 
 **The gap between what I meant my labels to capture and what the model
 learned:**
 <!-- Two sentences. Your confusion matrix is the evidence. -->
+
+All the labels often overlap but have specific intricacies. I was hoping the model would show the ability to differentiate between them. However it just seems confused.I the confusion matrix, besides the 0 attempts to label cat love, all the other labels are mistaken for other labels. There doesn't seem to be a clear stategy. With a diagonal of 3-1-5 most of the labels are mislabeled with an exception to the question label. However the question label also gets overused.
+
+
+| true \ predicted | catlove | update | advice | question |
+|---|---|---|---|---|
+| **catlove** | 0 | 0 | 0 | 7 |
+| **update** | 0 | 3 | 1 | 4 |
+| **advice** | 0 | 4 | 1 | 2 |
+| **question** | 0 | 1 | 2 | 5 |
+
+Biggest confusion: 7 real `catlove` posts called `question`.
+The other direction: 0 real `question` posts called `catlove`.
 
 
 
